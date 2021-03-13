@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Top 10  University 2020</string>
+    <string name="source">Sumber : https://www.topuniversities.com</string>
+    <string name="name">Name Univ</string>
+    <string name="description_univ">Description Univ</string>
+    <string name="profile">Profile</string>
+    <string name="haris_nasrulloh">Haris Nasrulloh</string>
+    <string name="harisnasrulloh212_gmail_com">harisnasrullah212@gmail.com</string>
+    <string name="country">Country</string>
+    <string name="country_rank">0</string>
+    <string name="link_univ">Click For More Information</string>
+    <string name="splashimage">SplashImage</string>
+</resources>
