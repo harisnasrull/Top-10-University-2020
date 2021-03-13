@@ -10,4 +10,8 @@
     <string name="country_rank">0</string>
     <string name="link_univ">Click For More Information</string>
     <string name="splashimage">SplashImage</string>
+    <string name="logo">Logo</string>
+    <string name="list_mode">List Mode</string>
+    <string name="grid_mode">Grid Mode</string>
+    <string name="card_mode">Card Mode</string>
 </resources>

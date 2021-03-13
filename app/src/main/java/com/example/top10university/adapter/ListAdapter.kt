@@ -12,10 +12,10 @@ import com.example.top10university.R
 import com.example.top10university.model.Univ
 import kotlinx.android.synthetic.main.item_hero.view.*
 
-class UnivAdapter(private val listUniv: ArrayList<Univ>) : RecyclerView.Adapter<UnivAdapter.UnivViewHolder>() {
+class ListAdapter(private val listUniv: ArrayList<Univ>) : RecyclerView.Adapter<ListAdapter.UnivViewHolder>() {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): UnivViewHolder {
-        val view: View = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_hero,viewGroup,false)
+        val view: View = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_hero, viewGroup, false)
         return UnivViewHolder(view)
     }
 

@@ -10,7 +10,8 @@ import android.view.View
 import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.top10university.adapter.UnivAdapter
+import com.example.top10university.adapter.GridAdapter
+import com.example.top10university.adapter.ListAdapter
 import com.example.top10university.data.UnivData
 import com.example.top10university.model.Univ
 
@@ -32,33 +33,46 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         rvUniverstities.setHasFixedSize(true)
 
         listUniv.addAll(UnivData.listUniv)
-        showRV()
+        showListRV()
     }
 
     override fun onClick(view: View) {
-        when (view.id){
+        when (view.id) {
             R.id.btn_source -> {
                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.topuniversities.com/university-rankings/world-university-rankings/2020"))
                 startActivity(intent)
             }
         }
     }
-    fun showRV() {
+
+    fun showListRV() {
         rvUniverstities.layoutManager = LinearLayoutManager(this)
-        val univAdapter = UnivAdapter(listUniv)
+        val univAdapter = ListAdapter(listUniv)
         rvUniverstities.adapter = univAdapter
     }
 
+    fun showGridRV() {
+        rvUniverstities.layoutManager = LinearLayoutManager(this)
+        val gridAdapter = GridAdapter(listUniv)
+        rvUniverstities.adapter = gridAdapter
+    }
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_main,menu)
+        menuInflater.inflate(R.menu.menu_main, menu)
         return super.onCreateOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId){
+        when (item.itemId) {
             R.id.btn_profile -> {
-                val  intent = Intent(this, ProfileActivity::class.java)
+                val intent = Intent(this, ProfileActivity::class.java)
                 startActivity(intent)
+            }
+            R.id.list_mode -> {
+                showListRV()
+            }
+            R.id.grid_mode -> {
+                showGridRV()
             }
         }
         return super.onOptionsItemSelected(item)
