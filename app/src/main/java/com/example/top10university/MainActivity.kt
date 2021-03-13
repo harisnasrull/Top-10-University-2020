@@ -45,13 +45,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    fun showListRV() {
+    private fun showListRV() {
         rvUniverstities.layoutManager = LinearLayoutManager(this)
         val univAdapter = ListAdapter(listUniv)
         rvUniverstities.adapter = univAdapter
     }
 
-    fun showGridRV() {
+    private fun showGridRV() {
         rvUniverstities.layoutManager = LinearLayoutManager(this)
         val gridAdapter = GridAdapter(listUniv)
         rvUniverstities.adapter = gridAdapter

@@ -11,8 +11,6 @@ import com.example.top10university.DetailUnivActivity
 import com.example.top10university.R
 import com.example.top10university.model.Univ
 import kotlinx.android.synthetic.main.item_grid_univ.view.*
-import kotlinx.android.synthetic.main.item_hero.view.*
-import kotlinx.android.synthetic.main.item_hero.view.img_univ
 
 class GridAdapter(private val gridUniv: ArrayList<Univ>) : RecyclerView.Adapter<GridAdapter.GridViewHolder>() {
 
